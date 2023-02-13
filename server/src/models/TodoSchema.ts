@@ -1,5 +1,4 @@
-import mongoose, { mongo } from "mongoose";
-const { Schema } = mongoose;
+import mongoose, { Schema } from "mongoose";
 
 const todoSchema = new Schema({
   author: String,
@@ -9,4 +8,5 @@ const todoSchema = new Schema({
   finish: Boolean,
 });
 
-const Todo = mongoose.model("Todo", todoSchema);
+// convertion en model
+export const Todo = mongoose.model("Todo", todoSchema);
