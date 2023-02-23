@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  mongodb:
+    container_name: mern-todo-app-db
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: toor
+    volumes:
+      - /var/container/mern-todo-app:/data/db
+    ports:
+      - 27017:27017
+  #express:
+  #react:
